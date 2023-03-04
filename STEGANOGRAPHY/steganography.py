@@ -109,7 +109,8 @@ def show_dialogencrypt():
                         pixel = pixel[:1] + (encrypted_byte,)
                     draw.point((x, y), pixel)
         password_dialog.destroy()
-        enc_im.save("encode.png")
+        enc_im.save("encode.png") 
+        text1.delete('1.0', END)
 
 
 
@@ -175,7 +176,8 @@ def show_dialogdecrypt():
         decrypted_message = ''.join(filter(lambda c: c in printable_chars, decrypted_message))
         # display the decrypted message
         text1.delete(1.0, END)
-        text1.insert(END, decrypted_message)
+        text1.insert(END, decrypted_message)   
+        password_dialog.destroy()
 
 
 
